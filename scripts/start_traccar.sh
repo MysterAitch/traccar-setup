@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /opt/traccar/bin/traccar start
+sudo /opt/traccar/bin/startDaemon.sh
