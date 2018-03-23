@@ -22,7 +22,7 @@ Vagrant.configure("2") do |config|
         node.vm.network :private_network, ip: "192.168.99.10"
 
         ## Server setup / provisioning
-        node.vm.provision "shell", path: "scripts/run_all_from_github.sh"
+        node.vm.provision "shell", path: "scripts/clone_from_github.sh"
         #node.vm.provision "shell", path: "scripts/run_all.sh"
     end
 end

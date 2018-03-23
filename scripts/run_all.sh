@@ -1,8 +1,14 @@
 #!/bin/bash
 
-## Clone the scripts etc 
-git clone https://github.com/MysterAitch/traccar-setup.git
-cd traccar-setup
+## Update and upgrade all
+./update.sh
 
-## Run all
-./script/run_all.sh
+#P Dependencies
+./install_git.sh
+./install_unzip.sh
+./install_java.sh
+
+## Traccar
+./install_traccar.sh
+#./setup_traccar.sh
+./start_traccar.sh
