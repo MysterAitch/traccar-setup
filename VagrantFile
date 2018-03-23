@@ -3,7 +3,6 @@
 
 %x(vagrant plugin install vagrant-vbguest) unless Vagrant.has_plugin?('vagrant-vbguest')
 
-
 Vagrant.configure("2") do |config|
 
     config.vm.define "traccar" do |node|
