@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -x # Activate debugging
+
 ## Update and upgrade all
 ./scripts/update.sh
 
@@ -15,3 +17,6 @@
 ./scripts/install_traccar.sh
 #./scripts/setup_traccar.sh
 ./scripts/start_traccar.sh
+
+
+set +x # Deactivate debugging
