@@ -18,5 +18,4 @@ set -x # Activate debugging
 #./scripts/setup_traccar.sh
 ./scripts/start_traccar.sh
 
-
 set +x # Deactivate debugging
