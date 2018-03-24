@@ -3,9 +3,12 @@
 ## Update and upgrade all
 ./scripts/update.sh
 
-#P Dependencies
+## Server details
 ./scripts/install_git.sh
 ./scripts/install_unzip.sh
+./scripts/install_fail2ban.sh
+
+## Dependencies
 ./scripts/install_java.sh
 
 ## Traccar
