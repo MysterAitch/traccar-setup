@@ -19,9 +19,19 @@ Vagrant.configure("2") do |config|
 
         ## Networking
         node.vm.network :private_network, ip: "192.168.99.10"
+        node.vm.network :forwarded_port, guest: 8082, host: 8082, id: "traccar_tracking_port"
+
 
         ## Server setup / provisioning
-        node.vm.provision "shell", path: "scripts/clone_from_github.sh"
-        #node.vm.provision "shell", path: "scripts/run_all.sh"
+        #node.vm.provision "shell", privileged: false, path: "clone_from_github.sh"
+        #node.vm.provision "shell", path: "run_all.sh"
+        
+        config.vm.provision "shell", privileged: false, inline: <<-SHELL            
+            ## Clone the scripts etc 
+            git clone https://github.com/MysterAitch/traccar-setup.git 
+            
+            cd traccar-setup
+            ./run_all.sh
+        SHELL
     end
 end
